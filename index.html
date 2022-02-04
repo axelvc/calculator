@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" defer src="/main.js"></script>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <main>
+      <section class="display">
+        <span id="history"></span>
+        <input id="input" value="0" />
+      </section>
+      <section class="numpad">
+        <button class="btn" data-value="clear" data-operator>c</button>
+        <button class="btn" data-value="clearAll" data-operator>ac</button>
+        <button class="btn" data-value="back" data-operator>&larr;</button>
+        <button class="btn" data-value="divide" data-operator>&divide;</button>
+        <button class="btn" data-value="7">7</button>
+        <button class="btn" data-value="8">8</button>
+        <button class="btn" data-value="9">9</button>
+        <button class="btn" data-value="multiply" data-operator>&times;</button>
+        <button class="btn" data-value="4">4</button>
+        <button class="btn" data-value="5">5</button>
+        <button class="btn" data-value="6">6</button>
+        <button class="btn" data-value="sub" data-operator>&minus;</button>
+        <button class="btn" data-value="1">1</button>
+        <button class="btn" data-value="2">2</button>
+        <button class="btn" data-value="3">3</button>
+        <button class="btn" data-value="add" data-operator>&plus;</button>
+        <button class="btn" data-value="0">0</button>
+        <button class="btn" data-value=".">.</button>
+        <button class="btn" data-value="result" data-operator>&equals;</button>
+      </section>
+    </main>
+  </body>
+</html>

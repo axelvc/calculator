@@ -1,0 +1,116 @@
+$gray1: #f8f9fa;
+$gray2: #e9ecef;
+$gray3: #dee2e6;
+$gray4: #ced4da;
+$gray5: #495057;
+$gray6: #343a40;
+$gray7: #212529;
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+
+  &:focus-visible {
+    outline-color: $gray5;
+    outline-width: 1px;
+  }
+}
+
+::selection {
+  background: $gray5;
+  color: $gray1;
+}
+
+body {
+  font-family: system-ui;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background: $gray7;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  overflow: hidden;
+  height: 100vh;
+
+  @media (min-width: 425px) {
+    border-radius: 0.5rem;
+    grid-template-rows: 9rem auto;
+    width: 24rem;
+    height: auto;
+  }
+}
+
+/*********************************** display ***********************************/
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 1rem;
+  overflow: hidden;
+  color: $gray6;
+  background: $gray1;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+#history {
+  font-size: 0.5em;
+  font-weight: 500;
+  color: $gray5;
+}
+
+#input {
+  width: 100%;
+  text-align: right;
+  background: $gray1;
+  border: none;
+
+  &:focus-visible {
+    outline-color: $gray5;
+  }
+}
+
+/*********************************** numpad ***********************************/
+.numpad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  box-sizing: border-box;
+}
+.btn {
+  color: $gray5;
+  aspect-ratio: 1;
+  font-variant: small-caps;
+  background: $gray1;
+  border: 1px solid $gray4;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 500;
+  user-select: none;
+  transition: filter 100ms;
+
+  &[data-operator] {
+    background: $gray3;
+  }
+
+  &[data-value='result'] {
+    background: $gray2;
+    grid-column: span 2;
+    aspect-ratio: initial;
+  }
+
+  &:hover,
+  &:focus-visible {
+    filter: brightness(0.9);
+  }
+
+  &:active {
+    filter: brightness(0.8);
+  }
+}
