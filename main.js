@@ -85,7 +85,7 @@ function handleClickOperator(e) {
   if (oldOperator) {
     const result = getResult(oldOperator, history, input)
 
-    if (isValid(result)) {
+    if (!isValid(result)) {
       return setState({
         input: result,
         history: null,
